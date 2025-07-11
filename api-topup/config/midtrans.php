@@ -6,14 +6,15 @@ return [
     | Midtrans Server Key
     |--------------------------------------------------------------------------
     */
-    'server_key' => env('MIDTRANS_SERVER_KEY', 'Mid-server-z6ywaF2fyRjlDy0VOvbnKGhC'),
+    'server_key' => env('MIDTRANS_SERVER_KEY'),
+
 
     /*
     |--------------------------------------------------------------------------
     | Midtrans Client Key
     |--------------------------------------------------------------------------
     */
-    'client_key' => env('MIDTRANS_CLIENT_KEY', 'Mid-client-SQ1A7kvTdmdoXzgB'),
+    'client_key' => env('MIDTRANS_CLIENT_KEY'),
 
     /*
     |--------------------------------------------------------------------------
