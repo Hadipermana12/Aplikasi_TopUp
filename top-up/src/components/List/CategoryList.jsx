@@ -46,16 +46,16 @@ const pulsa = [
     description: 'Top up pulsa XL',
   },
   {
-    id: 2,
+    id: 3,
     image: './image/indosat.png',
     title: 'Indosat',
-    description: 'Top up pulsa XL',
+    description: 'Top up pulsa Indosat',
   },
   {
-    id: 2,
+    id: 4,
     image: './image/smartfren.jpg',
     title: 'Smartfren',
-    description: 'Top up pulsa XL',
+    description: 'Top up pulsa Smartfren',
   },
 ];
 
@@ -83,13 +83,6 @@ const scrollToSection = (id) => {
 };
 
 const CategoryList = () => {
-
-  const scrollToSection = (id) => {
-  const section = document.getElementById(id);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
-  }
-};
 
   return (
     

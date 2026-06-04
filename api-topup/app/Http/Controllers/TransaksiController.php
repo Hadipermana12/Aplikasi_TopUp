@@ -43,7 +43,7 @@ class TransaksiController extends Controller
             'jumlah',
             'payment_method',
             'total_harga',
-            'nohp',
+            'no_hp',
             'status_pembayaran',
             'status_transaksi',
         ]));

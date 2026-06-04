@@ -11,6 +11,7 @@ class CreateTransaksiTable extends Migration
         Schema::create('transaksi', function (Blueprint $table) {
             $table->id();
             $table->foreignId('produk_id')->constrained('products')->onDelete('cascade');
+            $table->string('produk_type')->nullable();
             $table->unsignedBigInteger('user_id')->nullable(); // jika user login
             $table->string('nama');
             $table->string('nickname')->nullable();

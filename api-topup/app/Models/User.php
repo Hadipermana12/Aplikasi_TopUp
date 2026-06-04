@@ -42,6 +42,6 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
-
-    public $timestamps = false;
+    // Allow Eloquent to manage created_at/updated_at (migration creates timestamps)
+    public $timestamps = true;
 }

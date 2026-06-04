@@ -19,12 +19,19 @@ class UserController extends Controller
     
     function register(Request $req)
     {
-       $user = new User;
-       $user->name=$req->input('name');
-       $user->email=$req->input('email');
-       $user->password= Hash::make($req->input('password'));
-       $user->save();
-       return $user;
+       $validated = $req->validate([
+           'name' => 'required|string|max:255',
+           'email' => 'required|email|unique:users,email',
+           'password' => 'required|string|min:6',
+       ]);
+
+       $user = User::create([
+           'name' => $validated['name'],
+           'email' => $validated['email'],
+           'password' => Hash::make($validated['password']),
+       ]);
+
+       return response()->json($user, 201);
     }
 
     function login(Request $req){
